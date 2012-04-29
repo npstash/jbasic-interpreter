@@ -1,0 +1,35 @@
+
+------------------------------------------------------------------------
+Customization of jbasic language
+
+Purpose:
+1. in order to embed part of its specification in another application
+
+Guide:
+1. Disable/enable libraries in lang.ModuleFactory 
+2. lang.ModuleFactory also contains what basic datatypes are used
+3. parse.JBasicParser contains what parsers operate at top level
+4. parse.JBasicStatementParser defines set of statement parsers 
+   (statement parsers may not contain all the top-level constructs)
+5. JBasicStarter provides a RuntimeSerivceProvider
+
+To do:
+1. All customizations must be possible w/o changing parser code, i.e:
+   - appearance and order of parsers at top/statement level
+   - inclusion of libraries
+   - also inclusion of modules/programs
+   - possible use of properties or XML
+
+------------------------------------------------------------------------
+TODOs
+
+1. Compile and run maze.bas
+    - graphic services and library
+    - plugable *Services mechanism
+	- finish REDIM! and test it
+	- exits for fn and sub - ExitParser
+	- implicit variables should be optional
+
+	- OVERLOADING!
+
+------------------------------------------------------------------------
